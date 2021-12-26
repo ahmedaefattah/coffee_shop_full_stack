@@ -14,7 +14,6 @@ setup_db(app)
     binds a flask application and a SQLAlchemy service
 '''
 
-
 def setup_db(app):
     app.config["SQLALCHEMY_DATABASE_URI"] = database_path
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
@@ -40,7 +39,6 @@ def db_drop_and_create_all():
 Drink
 a persistent drink entity, extends the base SQLAlchemy Model
 '''
-
 
 class Drink(db.Model):
     # Autoincrementing, unique primary key
